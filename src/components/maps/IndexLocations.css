@@ -1,0 +1,13 @@
+.center {
+  margin: auto;
+  border: 3px solid green;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+}
+
+.title {
+  color: #1e8e00;
+  font-weight: 600;
+  font-size: 30px;
+}

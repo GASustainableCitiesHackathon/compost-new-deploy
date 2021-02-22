@@ -1,25 +1,128 @@
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyles from "./components/GlobalStyles";
+import React, { Component, Fragment } from "react";
+import { Route } from "react-router-dom";
+import { v4 as uuid } from "uuid";
+import About from "./components/About/About";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import AuthenticatedRoute from "./components/AuthenticatedRoute/AuthenticatedRoute";
+import AutoDismissAlert from "./components/AutoDismissAlert/AutoDismissAlert";
+import Header from "./components/Header/Header";
+import SignUp from "./components/SignUp/SignUp";
+import SignIn from "./components/SignIn/SignIn";
+import SignOut from "./components/SignOut/SignOut";
+import ChangePassword from "./components/ChangePassword/ChangePassword";
+// import EnterWeight from './components/EnterWeight/EnterWeight'
+import IndexLocations from "./components/maps/IndexLocations";
+import Faq from "./components/Faq/Faq";
+// import Footer from "./components/Footer/Footer";
+import Footer1 from "./components/Footer/Footer1";
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            user: null,
+            msgAlerts: [],
+        };
+    }
+
+    setUser = (user) => this.setState({ user });
+
+    clearUser = () => this.setState({ user: null });
+
+    deleteAlert = (id) => {
+        this.setState((state) => {
+            return { msgAlerts: state.msgAlerts.filter((msg) => msg.id !== id) };
+        });
+    };
+
+    msgAlert = ({ heading, message, variant }) => {
+        const id = uuid();
+        this.setState((state) => {
+            return {
+                msgAlerts: [...state.msgAlerts, { heading, message, variant, id }],
+            };
+        });
+    };
+
+    render() {
+        const { msgAlerts, user } = this.state;
+
+        return (
+            <Fragment>
+                <GlobalStyles />
+                <Header user={user} />
+                {msgAlerts.map((msgAlert) => (
+                    <AutoDismissAlert
+                        key={msgAlert.id}
+                        heading={msgAlert.heading}
+                        variant={msgAlert.variant}
+                        message={msgAlert.message}
+                        id={msgAlert.id}
+                        deleteAlert={this.deleteAlert}
+                    />
+                ))}
+                {/* <EnterWeight/> */}
+                <main>
+                    <Route
+                        exact
+                        path="/"
+                        render={() => (
+                            <div>
+                                <IndexLocations
+                                    msgAlert={this.msgAlert}
+                                    setReceiver={this.setReceiver}
+                                />
+                                <Footer1 />
+                            </div>
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/about"
+                        render={() => (
+                            <div>
+                                <About />
+                                <Footer1 />
+                            </div>
+                        )}
+                    />
+                    <Route exact path="/faq" render={() => <Faq />} />
+                    <Route
+                        path="/sign-up"
+                        render={() => (
+                            <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
+                        )}
+                    />
+                    <Route
+                        path="/sign-in"
+                        render={() => (
+                            <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
+                        )}
+                    />
+                    <AuthenticatedRoute
+                        user={user}
+                        path="/sign-out"
+                        render={() => (
+                            <SignOut
+                                msgAlert={this.msgAlert}
+                                clearUser={this.clearUser}
+                                user={user}
+                            />
+                        )}
+                    />
+                    <AuthenticatedRoute
+                        user={user}
+                        path="/change-password"
+                        render={() => (
+                            <ChangePassword msgAlert={this.msgAlert} user={user} />
+                        )}
+                    />
+                </main>
+                {/* <Footer /> */}
+            </Fragment>
+        );
+    }
 }
 
 export default App;
