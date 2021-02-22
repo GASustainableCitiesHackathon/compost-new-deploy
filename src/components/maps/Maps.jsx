@@ -11,7 +11,7 @@ import "./IndexLocations.css"
 function Maps(props) {
     const [randomNumber, setRandomNumber] = useState([])
     const [randomImage, setRandomImage] = useState("")
-	const { setViewport, msgAlert, viewport, data, user, location, setLocation } = props
+    const { setViewport, msgAlert, viewport, data, user, location, setLocation } = props
     const getRandomInt = () => {
         const num1 = Math.floor(Math.random() * 999)
         const num2 = Math.floor(Math.random() * 9999)
@@ -30,53 +30,54 @@ function Maps(props) {
     const mapRef = useRef()
 
     return (
-		<MapDiv>
-			<ReactMapGL {...viewport}
-				ref={mapRef}
-				mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-				mapStyle="mapbox://styles/arbydabu/cklecojg52h6i17jyjznsezj7"
-				onViewportChange={(viewport => { setViewport(viewport) })}
-			>
-				{data.map(location => (
-					<Marker key={location._id} latitude={location.latitude} longitude={location.longitude} >
-						<div>
-							<DroppedPin
-								onClick={(e) => {
-									e.preventDefault();
-									setLocation(location);
-									getRandomInt()
-									getRandomImage()
-								}}>
-								<DroppedPinImage src="/icons/map-icon.svg" alt="Marker Icon" />
-							</DroppedPin>
-						</div>
-					</Marker>
-				))}
-				<Geocoder position="top-left" mapRef={mapRef} mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN} />
-				<GeolocateControl 
-					style={{ right: 10, top: 10, zoom: 1 }}
-					positionOptions={{ enableHighAccuracy: true }}
-					trackUserLocation={true}
-				/>
-				{location && (
-					<Popup
-						closeOnClick={false}
-						closeButton={true}
-						onClick={() => { getRandomInt() }}
-						latitude={location.latitude}
-						longitude={location.longitude}
-						onClose={() => setLocation(null)}
-					>
-						<LocationCard 
-							user={user} 
-							msgAlert={msgAlert}
-							location={location} 
-							randomNumber={randomNumber} 
-							randomImage={randomImage} />
-					</Popup>
-				)}
-			</ReactMapGL>
-		</MapDiv>
+        <MapDiv>
+            <ReactMapGL {...viewport}
+                ref={mapRef}
+                // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+                mapboxApiAccessToken='pk.eyJ1IjoidGFhc2VlbjcxIiwiYSI6ImNrbGNzcHBjdzMzaWYzMm5ycDJ2Yzd6bjkifQ.4Om_pHHEF8YtPiZ3iWaNZQ'
+                mapStyle="mapbox://styles/arbydabu/cklecojg52h6i17jyjznsezj7"
+                onViewportChange={(viewport => { setViewport(viewport) })}
+            >
+                {data.map(location => (
+                    <Marker key={location._id} latitude={location.latitude} longitude={location.longitude} >
+                        <div>
+                            <DroppedPin
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setLocation(location);
+                                    getRandomInt()
+                                    getRandomImage()
+                                }}>
+                                <DroppedPinImage src="/icons/map-icon.svg" alt="Marker Icon" />
+                            </DroppedPin>
+                        </div>
+                    </Marker>
+                ))}
+                <Geocoder position="top-left" mapRef={mapRef} mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN} />
+                <GeolocateControl
+                    style={{ right: 10, top: 10, zoom: 1 }}
+                    positionOptions={{ enableHighAccuracy: true }}
+                    trackUserLocation={true}
+                />
+                {location && (
+                    <Popup
+                        closeOnClick={false}
+                        closeButton={true}
+                        onClick={() => { getRandomInt() }}
+                        latitude={location.latitude}
+                        longitude={location.longitude}
+                        onClose={() => setLocation(null)}
+                    >
+                        <LocationCard
+                            user={user}
+                            msgAlert={msgAlert}
+                            location={location}
+                            randomNumber={randomNumber}
+                            randomImage={randomImage} />
+                    </Popup>
+                )}
+            </ReactMapGL>
+        </MapDiv>
     )
 }
 
