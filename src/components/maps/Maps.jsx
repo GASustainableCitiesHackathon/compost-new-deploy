@@ -33,8 +33,8 @@ function Maps(props) {
         <MapDiv>
             <ReactMapGL {...viewport}
                 ref={mapRef}
-                // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-                mapboxApiAccessToken='pk.eyJ1IjoidGFhc2VlbjcxIiwiYSI6ImNrbGNzcHBjdzMzaWYzMm5ycDJ2Yzd6bjkifQ.4Om_pHHEF8YtPiZ3iWaNZQ'
+                mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+                // mapboxApiAccessToken='pk.eyJ1IjoidGFhc2VlbjcxIiwiYSI6ImNrbGNzcHBjdzMzaWYzMm5ycDJ2Yzd6bjkifQ.4Om_pHHEF8YtPiZ3iWaNZQ'
                 mapStyle="mapbox://styles/arbydabu/cklecojg52h6i17jyjznsezj7"
                 onViewportChange={(viewport => { setViewport(viewport) })}
             >
