@@ -84,10 +84,19 @@ const HomePageWrapper = styled.div`
 `
 
 const HomeDiv = styled.div`
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px; */
 	padding-top: 200px;
+    .row{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 1px;
+    }
+    .col-md-10{
+        display: flex;
+        flex-direction: column;
+    }
     @media (max-width: 768px ){
         display: flex;
         flex-direction: column;
@@ -96,6 +105,10 @@ const HomeDiv = styled.div`
         .col-md-1{
          display: flex;
         justify-content: center;
+        }
+        .row{
+            display: flex;
+            flex-direction: column;
         }
     }
 `
