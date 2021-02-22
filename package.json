@@ -1,5 +1,6 @@
 {
     "name": "compost-front-end",
+    "homepage": "https://GASustainableCitiesHackathon.github.io/compost-new-deploy",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
