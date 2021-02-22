@@ -69,11 +69,7 @@ class App extends Component {
             path="/"
             render={() => (
               <div>
-                <IndexLocations
-                  user={user}
-                  msgAlert={this.msgAlert}
-                  setReceiver={this.setReceiver}
-                />
+                <IndexLocations user={user} msgAlert={this.msgAlert} />
                 <Footer1 />
               </div>
             )}
