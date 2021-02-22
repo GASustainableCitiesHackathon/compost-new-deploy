@@ -3,38 +3,37 @@ import { Card, Form, Button, Modal } from "react-bootstrap";
 import { Container, Row, Col } from "react-bootstrap";
 import { patchWeight } from "../../api/location.js";
 import styled from "styled-components";
-// import messages from "../AutoDismissAlert/messages";
-// import { withRouter } from "react-router-dom";
 import "./IndexLocations.css";
 
-const [show, setShow] = useState(false);
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
-const [weight, setWeight] = useState("");
-const { msgAlert, user, location, randomNumber, randomImage } = props;
+const LocationCard = ({ user, location, randomNumber, randomImage }) => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const [weight, setWeight] = useState("");
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  patchWeight(location, weight, user)
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
-  //   .then(() =>
-  //     msgAlert({
-  //       heading: "Thank you for your compost!",
-  //       message: messages.signInSuccess,
-  //       variant: "success",
-  //     })
-  //   )
-  //     .then(() => history.push("/"))
-  //   .catch((error) => {
-  //     this.setState({ email: "", password: "" });
-  //     msgAlert({
-  //       heading: "Compost Entry Failed with Error: " + error.message,
-  //       message: messages.signInFailure,
-  //       variant: "danger",
-  //     });
-  //   });
-  //   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    patchWeight(location, weight, user)
+      .then(
+        () => {
+          console.log("success");
+        }
+        // msgAlert({
+        //   heading: "Thank you for your compost!",
+        //   message: messages.signInSuccess,
+        //   variant: "success",
+        // })
+      )
+      //   .then(() => history.push("/"))
+      .catch((error) => {
+        console.log("error");
+        // msgAlert({
+        //   heading: "Sign In Failed with error: " + error.message,
+        //   message: messages.signInFailure,
+        //   variant: "danger",
+        // });
+      });
+  };
 
   return (
     <Container>
