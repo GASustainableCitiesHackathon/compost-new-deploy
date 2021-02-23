@@ -13,9 +13,9 @@ const LocationCard = ({ user, location, randomNumber, randomImage }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('loc, weight, user', location, weight, user)
     patchWeight(location, weight, user)
-      .then(
-        () => {
+      .then(() => {
           console.log("success");
         }
         // msgAlert({
