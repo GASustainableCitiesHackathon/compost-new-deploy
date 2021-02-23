@@ -5,7 +5,7 @@ import { patchWeight } from "../../api/location.js";
 import styled from "styled-components";
 import "./IndexLocations.css";
 
-const LocationCard = ({ user, location, randomNumber, randomImage }) => {
+const LocationCard = ({ msgAlert, user, location, randomNumber, randomImage }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -15,23 +15,18 @@ const LocationCard = ({ user, location, randomNumber, randomImage }) => {
     e.preventDefault();
     console.log('loc, weight, user', location, weight, user)
     patchWeight(location, weight, user)
-      .then(() => {
-          console.log("success");
-        }
-        // msgAlert({
-        //   heading: "Thank you for your compost!",
-        //   message: messages.signInSuccess,
-        //   variant: "success",
-        // })
+      .then(() => 
+        msgAlert({
+          heading: "Thank you for your compost!",
+          variant: "success",
+        })
       )
-      //   .then(() => history.push("/"))
+      .then(() => handleClose())
       .catch((error) => {
-        console.log("error");
-        // msgAlert({
-        //   heading: "Sign In Failed with error: " + error.message,
-        //   message: messages.signInFailure,
-        //   variant: "danger",
-        // });
+        msgAlert({
+          heading: "Sign In Failed with error: " + error.message,
+          variant: "danger",
+        });
       });
   };
 
@@ -48,15 +43,15 @@ const LocationCard = ({ user, location, randomNumber, randomImage }) => {
               {location.borough}, NY {location.zip_code}
             </FoodScrapDropOffSite>
             <SiteInfo>
-              <img src="/icons/popup/phone.png" width="10px" /> (718)
+              <img src="/icons/popup/phone.png" width="10px" alt="phone" /> (718)
               {randomNumber[0]}-{randomNumber[1]}
             </SiteInfo>
             <SiteInfo>
-              <img src="/icons/globe.svg" width="10px" />{" "}
+              <img src="/icons/globe.svg" width="10px" alt="globe"/>{" "}
               <a href={location.website}>{location.website}</a>
             </SiteInfo>
             <SiteInfo>
-              <img src="/icons/popup/directions.png" width="10px" /> Directions
+              <img src="/icons/popup/directions.png" width="10px" alt="directions"/> Directions
             </SiteInfo>
           </BusinessInfo>
         </Col>
@@ -65,7 +60,7 @@ const LocationCard = ({ user, location, randomNumber, randomImage }) => {
         <Col xs={6}>
           <SiteInfo>Total Compost: {location.weights.length}</SiteInfo>
           <SiteInfo>
-            <img src="/icons/popup/calendar.png" width="10px" />
+            <img src="/icons/popup/calendar.png" width="10px" alt="calendar"/>
             Hours: {location.hours_from} - {location.hours_to}
           </SiteInfo>
           <AdditionalInfo>

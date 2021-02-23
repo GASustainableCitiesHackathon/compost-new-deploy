@@ -81,49 +81,6 @@ function Maps(props) {
     )
 }
 
-// const BusinessContainer = styled.div`
-// 	padding: 1rem 1rem 1rem 1rem;
-// 	background-image: linear-gradient(to top right, green, white);
-// `
-
-const BusinessInfo = styled.div`
-    flex-direction: column;
-    flex: 1;
-`
-const BusinessImage = styled.div`
-    display: flex;
-    
-`
-
-const FoodScrapDropOffSite = styled.h4`
-    font-size: 20px;
-	font-weight: 600;
-	color: #656565;
- `
-const SiteInfo = styled.p`
-    font-size: 12px;
-	margin-bottom: 0;
-    img{
-        margin-right: 1px
-    }
-`
-const AdditionalInfo = styled.p`
-    font-size: 12px;
-    width: 30vh;
-`
-const PopUpInfo = styled.div`
-    cursor: text;
-    -webkit-user-select: text;  /* Chrome 49+ */
-    -moz-user-select: text;     /* Firefox 43+ */
-    -ms-user-select: text;      /* No support yet */
-    user-select: text;   
-`
-const CloseButton = styled.div`
-    cursor: pointer;
-	display: flex;
-	justify-content: flex-end;
-`
-
 const MapDiv = styled.div`
     display: flex;
     justify-content: center;
