@@ -2,10 +2,17 @@ import React, { useState } from "react";
 import { Card, Form, Button, Modal } from "react-bootstrap";
 import { Container, Row, Col } from "react-bootstrap";
 import { patchWeight } from "../../api/location.js";
+import messages from "../AutoDismissAlert/messages";
 import styled from "styled-components";
 import "./IndexLocations.css";
 
-const LocationCard = ({ user, location, randomNumber, randomImage }) => {
+const LocationCard = ({
+  user,
+  msgAlert,
+  location,
+  randomNumber,
+  randomImage,
+}) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -14,26 +21,31 @@ const LocationCard = ({ user, location, randomNumber, randomImage }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     patchWeight(location, weight, user)
-      .then(
-        () => {
-          console.log("success");
-        }
-        // msgAlert({
-        //   heading: "Thank you for your compost!",
-        //   message: messages.signInSuccess,
-        //   variant: "success",
-        // })
+      .then(() =>
+        msgAlert({
+          heading: "Thank you for your compost!",
+          message: messages.signInSuccess,
+          variant: "success",
+        })
       )
-      //   .then(() => history.push("/"))
-      .catch((error) => {
-        console.log("error");
-        // msgAlert({
-        //   heading: "Sign In Failed with error: " + error.message,
-        //   message: messages.signInFailure,
-        //   variant: "danger",
-        // });
-      });
+      .then(() => handleClose())
+      .catch((error) =>
+        msgAlert({
+          heading: "failed!: " + error.message,
+          message: messages.signInFailure,
+          variant: "danger",
+        })
+      );
   };
+
+  const totalWeight = () => {
+    let total = 0;
+    location.weights.map((weight) => {
+      total += weight.weightLbs;
+    });
+    return total;
+  };
+  totalWeight();
 
   return (
     <Container>
@@ -63,7 +75,8 @@ const LocationCard = ({ user, location, randomNumber, randomImage }) => {
       </Row>
       <Row>
         <Col xs={6}>
-          <SiteInfo>Total Compost: {location.weights.length}</SiteInfo>
+          <SiteInfo>Total Compost: {totalWeight()} lbs</SiteInfo>
+          <SiteInfo>Total Dropoffs: {location.weights.length} lbs</SiteInfo>
           <SiteInfo>
             <img src="/icons/popup/calendar.png" width="10px" />
             Hours: {location.hours_from} - {location.hours_to}
@@ -75,15 +88,17 @@ const LocationCard = ({ user, location, randomNumber, randomImage }) => {
             <span>Open Months: </span>
             {location.open_months}
           </AdditionalInfo>
-          <div className="d-flex">
-            <Button
-              className="mr-auto p-2"
-              variant="success"
-              onClick={handleShow}
-            >
-              Calculate Your Compost
-            </Button>
-          </div>
+          {user ? (
+            <div className="d-flex">
+              <Button
+                className="mr-auto p-2"
+                variant="success"
+                onClick={handleShow}
+              >
+                Calculate Your Compost
+              </Button>
+            </div>
+          ) : null}
         </Col>
         <Col xs={6}>
           <BusinessImage className="d-flex justify-content-end">
