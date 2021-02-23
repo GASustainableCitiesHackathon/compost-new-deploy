@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/compost-new-deploy/static/css/main.5f0b948f.chunk.css",
-    "main.js": "/compost-new-deploy/static/js/main.a77130b1.chunk.js",
-    "main.js.map": "/compost-new-deploy/static/js/main.a77130b1.chunk.js.map",
-    "runtime-main.js": "/compost-new-deploy/static/js/runtime-main.c8e414bc.js",
-    "runtime-main.js.map": "/compost-new-deploy/static/js/runtime-main.c8e414bc.js.map",
-    "static/css/2.93ca0c39.chunk.css": "/compost-new-deploy/static/css/2.93ca0c39.chunk.css",
-    "static/js/2.c4c8a2e8.chunk.js": "/compost-new-deploy/static/js/2.c4c8a2e8.chunk.js",
-    "static/js/2.c4c8a2e8.chunk.js.map": "/compost-new-deploy/static/js/2.c4c8a2e8.chunk.js.map",
-    "index.html": "/compost-new-deploy/index.html",
-    "static/css/2.93ca0c39.chunk.css.map": "/compost-new-deploy/static/css/2.93ca0c39.chunk.css.map",
-    "static/css/main.5f0b948f.chunk.css.map": "/compost-new-deploy/static/css/main.5f0b948f.chunk.css.map",
-    "static/js/2.c4c8a2e8.chunk.js.LICENSE.txt": "/compost-new-deploy/static/js/2.c4c8a2e8.chunk.js.LICENSE.txt"
+    "main.css": "/GASustainableCitiesHackathon/compost-new-deploy/static/css/main.5f0b948f.chunk.css",
+    "main.js": "/GASustainableCitiesHackathon/compost-new-deploy/static/js/main.a77130b1.chunk.js",
+    "main.js.map": "/GASustainableCitiesHackathon/compost-new-deploy/static/js/main.a77130b1.chunk.js.map",
+    "runtime-main.js": "/GASustainableCitiesHackathon/compost-new-deploy/static/js/runtime-main.8ca4ce4c.js",
+    "runtime-main.js.map": "/GASustainableCitiesHackathon/compost-new-deploy/static/js/runtime-main.8ca4ce4c.js.map",
+    "static/css/2.93ca0c39.chunk.css": "/GASustainableCitiesHackathon/compost-new-deploy/static/css/2.93ca0c39.chunk.css",
+    "static/js/2.50e2b565.chunk.js": "/GASustainableCitiesHackathon/compost-new-deploy/static/js/2.50e2b565.chunk.js",
+    "static/js/2.50e2b565.chunk.js.map": "/GASustainableCitiesHackathon/compost-new-deploy/static/js/2.50e2b565.chunk.js.map",
+    "index.html": "/GASustainableCitiesHackathon/compost-new-deploy/index.html",
+    "static/css/2.93ca0c39.chunk.css.map": "/GASustainableCitiesHackathon/compost-new-deploy/static/css/2.93ca0c39.chunk.css.map",
+    "static/css/main.5f0b948f.chunk.css.map": "/GASustainableCitiesHackathon/compost-new-deploy/static/css/main.5f0b948f.chunk.css.map",
+    "static/js/2.50e2b565.chunk.js.LICENSE.txt": "/GASustainableCitiesHackathon/compost-new-deploy/static/js/2.50e2b565.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c8e414bc.js",
+    "static/js/runtime-main.8ca4ce4c.js",
     "static/css/2.93ca0c39.chunk.css",
-    "static/js/2.c4c8a2e8.chunk.js",
+    "static/js/2.50e2b565.chunk.js",
     "static/css/main.5f0b948f.chunk.css",
     "static/js/main.a77130b1.chunk.js"
   ]
