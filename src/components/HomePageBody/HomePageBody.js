@@ -5,7 +5,7 @@ function HomePageBody() {
     return (
         <HomePageWrapper>
             <ImageDiv>
-                <img src="/img/children-planting.svg" alt="children planting" />
+                <img src="./img/children-planting.svg" alt="children planting" />
             </ImageDiv>
             <HomeDiv>
                 <BodyHeader>

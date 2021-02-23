@@ -63,7 +63,7 @@ function Faq() {
                 </FaqBody>
             </FaqDiv>
             <ImageDiv>
-                <img src="/img/questions-bro.svg" alt="Questions Bro" />
+                <img src="./img/questions-bro.svg" alt="Questions Bro" />
             </ImageDiv>
 
         </FaqWrapper>

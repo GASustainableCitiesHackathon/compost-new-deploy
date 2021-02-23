@@ -10,7 +10,7 @@ function OurTeam() {
                 <Container>
                     <Row>
                         <Col>
-                            <Image className="team" src="/img/team-work.png" />
+                            <Image className="team" src="./img/team-work.png" />
                         </Col>
                         <Col>
                             <Container>
@@ -23,29 +23,29 @@ function OurTeam() {
                                 </Row>
                                 <Row>
                                     <Col md={4}>
-                                        <Image src="/img/team/1.png" />
+                                        <Image src="./img/team/1.png" />
                                     </Col>
                                     <Col md={4}>
-                                        <Image src="/img/team/2.png" />
+                                        <Image src="./img/team/2.png" />
                                     </Col>
                                     <Col md={4}>
-                                        <Image src="/img/team/3.png" />
+                                        <Image src="./img/team/3.png" />
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col md={4}>
-                                        <Image src="/img/team/4.png" />
+                                        <Image src="./img/team/4.png" />
                                     </Col>
                                     <Col md={4}>
-                                        <Image src="/img/team/5.png" />
+                                        <Image src="./img/team/5.png" />
                                     </Col>
                                     <Col md={4}>
-                                        <Image src="/img/team/6.png" />
+                                        <Image src="./img/team/6.png" />
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col md={12} className="centerChild">
-                                        <Image src="/img/team/7.png" />
+                                        <Image src="./img/team/7.png" />
                                     </Col>
                                 </Row>
                             </Container>
