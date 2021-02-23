@@ -7,8 +7,8 @@ import styled from "styled-components";
 import "./IndexLocations.css";
 
 const LocationCard = ({
-  user,
   msgAlert,
+  user,
   location,
   randomNumber,
   randomImage,
@@ -20,22 +20,21 @@ const LocationCard = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("loc, weight, user", location, weight, user);
     patchWeight(location, weight, user)
       .then(() =>
         msgAlert({
           heading: "Thank you for your compost!",
-          message: messages.signInSuccess,
           variant: "success",
         })
       )
       .then(() => handleClose())
-      .catch((error) =>
+      .catch((error) => {
         msgAlert({
-          heading: "failed!: " + error.message,
-          message: messages.signInFailure,
+          heading: "Sign In Failed with error: " + error.message,
           variant: "danger",
-        })
-      );
+        });
+      });
   };
 
   const totalWeight = () => {
@@ -60,15 +59,21 @@ const LocationCard = ({
               {location.borough}, NY {location.zip_code}
             </FoodScrapDropOffSite>
             <SiteInfo>
-              <img src="/icons/popup/phone.png" width="10px" /> (718)
+              <img src="/icons/popup/phone.png" width="10px" alt="phone" />{" "}
+              (718)
               {randomNumber[0]}-{randomNumber[1]}
             </SiteInfo>
             <SiteInfo>
-              <img src="/icons/globe.svg" width="10px" />{" "}
+              <img src="/icons/globe.svg" width="10px" alt="globe" />{" "}
               <a href={location.website}>{location.website}</a>
             </SiteInfo>
             <SiteInfo>
-              <img src="/icons/popup/directions.png" width="10px" /> Directions
+              <img
+                src="/icons/popup/directions.png"
+                width="10px"
+                alt="directions"
+              />{" "}
+              Directions
             </SiteInfo>
           </BusinessInfo>
         </Col>
@@ -78,7 +83,7 @@ const LocationCard = ({
           <SiteInfo>Total Compost: {totalWeight()} lbs</SiteInfo>
           <SiteInfo>Total Dropoffs: {location.weights.length} lbs</SiteInfo>
           <SiteInfo>
-            <img src="/icons/popup/calendar.png" width="10px" />
+            <img src="/icons/popup/calendar.png" width="10px" alt="calendar" />
             Hours: {location.hours_from} - {location.hours_to}
           </SiteInfo>
           <AdditionalInfo>

@@ -9,7 +9,6 @@ export const index = (borough) => {
 };
 
 export const patchWeight = (location, weight, user) => {
-  console.log(location, weight, user);
   return axios({
     method: "PATCH",
     url: apiUrl + "/locations/" + location._id,

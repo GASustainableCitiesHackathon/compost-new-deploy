@@ -62,7 +62,6 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
-        {/* <EnterWeight/> */}
         <main>
           <Route
             exact
