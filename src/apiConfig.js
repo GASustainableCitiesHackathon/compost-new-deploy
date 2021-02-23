@@ -1,6 +1,6 @@
 let apiUrl
 const apiUrls = {
-    production: 'https://compost-backend.herokuapp.com',
+    production: 'https://secret-fortress-08155.herokuapp.com',
     development: 'http://localhost:4741'
 }
 
