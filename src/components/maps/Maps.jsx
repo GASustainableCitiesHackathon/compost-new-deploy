@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import ReactMapGL, { Marker, Popup, GeolocateControl } from 'react-map-gl'
+import MapGL, { Marker, Popup, GeolocateControl } from 'react-map-gl'
 import LocationCard from './LocationCard'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import styled from 'styled-components'
@@ -31,7 +31,7 @@ function Maps(props) {
 
 	return (
 		<MapDiv>
-			<ReactMapGL {...viewport}
+			<MapGL {...viewport}
 				ref={mapRef}
 				mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
 				// mapboxApiAccessToken='pk.eyJ1IjoidGFhc2VlbjcxIiwiYSI6ImNrbGNzaHJtejBteTkyb21sYnNzNTd1cmoifQ.JbmCKRBzbETAUS_sgbi5hg'
@@ -77,7 +77,7 @@ function Maps(props) {
 							randomImage={randomImage} />
 					</Popup>
 				)}
-			</ReactMapGL>
+			</MapGL>
 		</MapDiv>
 	)
 }
