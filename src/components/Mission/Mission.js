@@ -18,12 +18,12 @@ function OurMission() {
                                 Founded in 2021, we energize the conversation by empowering
                                 locals with nearby organizations to clear the air around urban
                                 composting. Only 4% of available food was composted in 2018.
-              </BodyParagraph>
+              				</BodyParagraph>
                             <BodyParagraph>
                                 Where to go? What to do? Who to ask? We are here to answer - and
                                 teach you ways to fight back against deforestation and food
                                 waste along the way!
-              </BodyParagraph>
+             				 </BodyParagraph>
                         </HomeDiv>
                     </Col>
                 </Row>
