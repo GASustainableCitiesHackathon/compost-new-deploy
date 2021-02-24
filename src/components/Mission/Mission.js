@@ -36,6 +36,15 @@ const HomePageWrapper = styled.div`
   display: flex;
   width: "100vh";
   /* margin-bottom: 5rem; */
+  .col-md-4{
+    @media (max-width: 768px ){
+        display: flex;
+        align-self: center;
+        img{
+            width: 200px;
+        }
+    }
+  }
 `;
 
 const HomeDiv = styled.div`

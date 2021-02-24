@@ -80,8 +80,12 @@ const HomePageWrapper = styled.div`
         flex-direction: column;
         width: 100%;
         align-items: center;
+        .benefits{
+            display:none;
+        }
     }
-`
+
+    `
 
 const HomeDiv = styled.div`
     /* display: grid;
@@ -106,6 +110,9 @@ const HomeDiv = styled.div`
          display: flex;
         justify-content: center;
         }
+    }
+        }
+    }
         .row{
             display: flex;
             flex-direction: column;

@@ -78,7 +78,7 @@ const ImageDiv = styled.div`
     @media (max-width: 768px ){
         display: flex;
         align-self: center;
-
+        width: 120px;
     }
 `
 const LearnMoreButton = styled.div`
