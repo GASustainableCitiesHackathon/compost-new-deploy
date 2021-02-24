@@ -13,7 +13,7 @@ function CompostBenefits() {
 					</BodyHeader>
                 </Row>
                 <Row>
-                    <Col md={10}>
+                    <Col md={9}>
                         <HomeDiv>
                             <Container>
                                 <Row>
@@ -62,7 +62,7 @@ function CompostBenefits() {
                             </Container>
                         </HomeDiv>
                     </Col>
-                    <Col md={2}>
+                    <Col md={3}>
                         <Image className='benefits' src='./img/benefits.png' />
                     </Col>
                 </Row>
