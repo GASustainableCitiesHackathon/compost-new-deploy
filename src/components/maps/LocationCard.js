@@ -144,7 +144,7 @@ const AdditionalInfo = styled.p`
 `;
 
 const ModalSubheading = styled.p`
-  font-color: #989898;
+  color: #989898;
   font-size: 20px;
   margin: auto;
 `;
