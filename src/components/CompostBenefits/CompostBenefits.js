@@ -110,14 +110,12 @@ const HomeDiv = styled.div`
          display: flex;
         justify-content: center;
         }
-    }
-        }
-    }
-        .row{
+    .row{
             display: flex;
             flex-direction: column;
         }
-    }
+}
+
 `
 const ImageDiv = styled.div`
     display: flex;
