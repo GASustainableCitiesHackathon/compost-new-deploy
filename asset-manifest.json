@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/compost-new-deploy/static/css/main.5f0b948f.chunk.css",
-    "main.js": "/compost-new-deploy/static/js/main.621d6a35.chunk.js",
-    "main.js.map": "/compost-new-deploy/static/js/main.621d6a35.chunk.js.map",
+    "main.js": "/compost-new-deploy/static/js/main.30a694d4.chunk.js",
+    "main.js.map": "/compost-new-deploy/static/js/main.30a694d4.chunk.js.map",
     "runtime-main.js": "/compost-new-deploy/static/js/runtime-main.c8e414bc.js",
     "runtime-main.js.map": "/compost-new-deploy/static/js/runtime-main.c8e414bc.js.map",
     "static/css/2.93ca0c39.chunk.css": "/compost-new-deploy/static/css/2.93ca0c39.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.93ca0c39.chunk.css",
     "static/js/2.33e90739.chunk.js",
     "static/css/main.5f0b948f.chunk.css",
-    "static/js/main.621d6a35.chunk.js"
+    "static/js/main.30a694d4.chunk.js"
   ]
 }
