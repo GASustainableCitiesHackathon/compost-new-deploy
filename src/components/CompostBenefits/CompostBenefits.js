@@ -63,7 +63,7 @@ function CompostBenefits() {
                         </HomeDiv>
                     </Col>
                     <Col md={2}>
-                        <Image className='benefits' src='/img/benefits.png' />
+                        <Image className='benefits' src='./img/benefits.png' />
                     </Col>
                 </Row>
             </Container>
@@ -80,8 +80,12 @@ const HomePageWrapper = styled.div`
         flex-direction: column;
         width: 100%;
         align-items: center;
+        .benefits{
+            display:none;
+        }
     }
-`
+
+    `
 
 const HomeDiv = styled.div`
     /* display: grid;
@@ -106,11 +110,12 @@ const HomeDiv = styled.div`
          display: flex;
         justify-content: center;
         }
-        .row{
+    .row{
             display: flex;
             flex-direction: column;
         }
-    }
+}
+
 `
 const ImageDiv = styled.div`
     display: flex;

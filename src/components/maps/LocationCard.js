@@ -62,6 +62,13 @@ const LocationCard = ({
               <img src="/icons/popup/phone.png" width="10px" alt="phone" />{" "}
               (718)
               {randomNumber[0]}-{randomNumber[1]}
+                        </SiteInfo>
+                        <SiteInfo>
+                            <img src="./icons/globe.svg" width="10px" alt="globe" />{" "}
+                            <a href={location.website}>{location.website}</a>
+                        </SiteInfo>
+                        <SiteInfo>
+                            <img src="./icons/popup/directions.png" width="10px" alt="directions" /> Directions
             </SiteInfo>
             <SiteInfo>
               <img src="/icons/globe.svg" width="10px" alt="globe" />{" "}
@@ -137,10 +144,10 @@ const LocationCard = ({
           >
             Submit
           </Button>
-        </Form>
-      </Modal>
-    </Container>
-  );
+                </Form>
+            </Modal>
+        </Container>
+    );
 };
 
 const BusinessInfo = styled.div`
@@ -169,7 +176,7 @@ const AdditionalInfo = styled.p`
 `;
 
 const ModalSubheading = styled.p`
-  font-color: #989898;
+  color: #989898;
   font-size: 20px;
   margin: auto;
 `;

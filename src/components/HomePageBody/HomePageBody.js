@@ -5,7 +5,7 @@ function HomePageBody() {
     return (
         <HomePageWrapper>
             <ImageDiv>
-                <img src="/img/children-planting.svg" alt="children planting" />
+                <img src="./img/children-planting.svg" alt="children planting" />
             </ImageDiv>
             <HomeDiv>
                 <BodyHeader>
@@ -78,7 +78,9 @@ const ImageDiv = styled.div`
     @media (max-width: 768px ){
         display: flex;
         align-self: center;
-
+        img{
+            width: 200px;
+        }
     }
 `
 const LearnMoreButton = styled.div`
