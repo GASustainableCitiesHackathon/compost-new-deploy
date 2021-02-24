@@ -48,7 +48,7 @@ function Maps(props) {
                                     getRandomInt()
                                     getRandomImage()
                                 }}>
-                                <DroppedPinImage src="/icons/map-icon.svg" alt="Marker Icon" />
+                                <DroppedPinImage src="./icons/map-icon.svg" alt="Marker Icon" />
                             </DroppedPin>
                         </div>
                     </Marker>

@@ -11,7 +11,7 @@ function WhyCompost() {
                 <Container>
                     <CardDeck>
                         <Card>
-                            <Card.Img variant="top" src='/img/card1.png' />
+                            <Card.Img variant="top" src='./img/card1.png' />
                             <Card.Title className='header text-center mt-4'>Food Waste &amp; Hunger</Card.Title>
                             <Card.Body className='text-center'>
                                 Americans generate about 295 million tons of MSW every year.
@@ -21,7 +21,7 @@ function WhyCompost() {
 							</Card.Body>
                         </Card>
                         <Card>
-                            <Card.Img variant="top" src='/img/card2.png' />
+                            <Card.Img variant="top" src='./img/card2.png' />
                             <Card.Title className='header text-center mt-4'>Landfills &amp; Landscapes</Card.Title>
                             <Card.Body className='text-center'>
                                 More than half of the yearly MSW that Americans
@@ -34,7 +34,7 @@ function WhyCompost() {
 							</Card.Body>
                         </Card>
                         <Card>
-                            <Card.Img variant="top" src='/img/card3.png' />
+                            <Card.Img variant="top" src='./img/card3.png' />
                             <Card.Title className='header text-center mt-4'>Cost Savings &amp; Sustainability</Card.Title>
                             <Card.Body className='text-center'>
                                 The average household throws out 43% of total food,

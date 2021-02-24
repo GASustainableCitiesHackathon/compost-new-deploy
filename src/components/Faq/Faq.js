@@ -63,7 +63,7 @@ function Faq() {
                 </FaqBody>
             </FaqDiv>
             <ImageDiv>
-                <img src="/img/questions-bro.svg" alt="Questions Bro" />
+                <img src="./img/questions-bro.svg" alt="Questions Bro" />
             </ImageDiv>
 
         </FaqWrapper>
@@ -80,7 +80,6 @@ const FaqWrapper = styled.div`
         flex-direction: column;
         width: 100%;
         align-items: center;
-
     }
     
     `
@@ -152,7 +151,9 @@ const ImageDiv = styled.div`
     @media (max-width: 768px ){
         display: flex;
         align-self: center;
-
+        img{
+            width: 120px;
+        }
     }
 `
 

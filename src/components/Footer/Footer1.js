@@ -8,7 +8,7 @@ function Footer1() {
             <GridWrapper>
                 <Grid1>
                     <ImageWrapper>
-                        <img src="/icons/logo.png" alt="Logo" />
+                        <img src="./icons/logo.png" alt="Logo" />
                     </ImageWrapper>
                     <HomeAndAboutWrapper>
                         <HomeDiv>
@@ -33,7 +33,7 @@ function Footer1() {
                     <FormWithButton>
                         <div className="fixedDiv">
                             <form autoComplete="off" action="/" method="get">
-                                <input placeholder="Email" type="text" id="lname" name="lname" /><span><button type="submit" value="submit"> <img src="/icons/right-arrow.png" alt="Right Arrow" width="46px" /></button></span>
+                                <input placeholder="Email" type="text" id="lname" name="lname" /><span><button type="submit" value="submit"> <img src="./icons/right-arrow.png" alt="Right Arrow" width="46px" /></button></span>
 
                             </form>
                         </div>
@@ -43,11 +43,11 @@ function Footer1() {
                     <div>
                         <h5>FOLLOW US</h5>
                         <IconsGalore>
-                            <Link to="/facebook"><img src="/icons/facebook.svg" alt="Facebook" /></Link>
-                            <Link to="/linkedin"> <img src="/icons/linkedin.svg" alt="LinkedIn" /></Link>
-                            <Link to="/twitter"><img src="/icons/twitter.svg" alt="Twitter" /></Link>
-                            <Link to="/instagram"><img src="/icons/instagram.svg" alt="Instagram" /></Link>
-                            <Link to="/tiktok">  <img src="/icons/tiktok.svg" alt="Tiktok" /></Link>
+                            <Link to="/facebook"><img src="./icons/facebook.svg" alt="Facebook" /></Link>
+                            <Link to="/linkedin"> <img src="./icons/linkedin.svg" alt="LinkedIn" /></Link>
+                            <Link to="/twitter"><img src="./icons/twitter.svg" alt="Twitter" /></Link>
+                            <Link to="/instagram"><img src="./icons/instagram.svg" alt="Instagram" /></Link>
+                            <Link to="/tiktok">  <img src="./icons/tiktok.svg" alt="Tiktok" /></Link>
                         </IconsGalore>
                     </div>
                 </Grid3>
