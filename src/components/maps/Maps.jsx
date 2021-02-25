@@ -34,7 +34,7 @@ function Maps(props) {
 
     return (
         <MapDiv>
-            <MapGL {...viewport}
+            {/* <MapGL {...viewport}
                 ref={mapRef}
                 mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
                 // mapboxApiAccessToken='pk.eyJ1IjoidGFhc2VlbjcxIiwiYSI6ImNrbGNzaHJtejBteTkyb21sYnNzNTd1cmoifQ.JbmCKRBzbETAUS_sgbi5hg'
@@ -80,6 +80,15 @@ function Maps(props) {
                             randomImage={randomImage} />
                     </Popup>
                 )}
+            </MapGL> */}
+            <MapGL
+                ref={mapRef}
+                {...viewport}
+                mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+                onViewportChange={(viewport) => { setViewport(viewport) }}
+                mapStyle="mapbox://styles/taaseen71/ckleb8llf0zv817lk5y1asq7s"
+            >
+
             </MapGL>
         </MapDiv>
     )
