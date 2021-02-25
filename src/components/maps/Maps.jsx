@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
-import MapGL, { Marker, Popup, GeolocateControl } from 'react-map-gl'
 import LocationCard from './LocationCard'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import styled from 'styled-components'
 import Geocoder from 'react-map-gl-geocoder'
 import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css"
 import "./IndexLocations.css"
+import MapGL, { Marker, Popup, GeolocateControl } from 'react-map-gl'
 // @ts-ignore
 // eslint-disable-next-line import/no-webpack-loader-syntax
 MapGL.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
