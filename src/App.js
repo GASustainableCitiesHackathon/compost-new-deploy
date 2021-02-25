@@ -52,6 +52,7 @@ class App extends Component {
         return (
             <Fragment>
                 <GlobalStyles />
+                <IndexLocation2 />
                 <Header user={user} />
                 {msgAlerts.map((msgAlert) => (
                     <AutoDismissAlert
@@ -70,7 +71,7 @@ class App extends Component {
                         render={() => (
                             <div>
                                 {/* <IndexLocations user={user} msgAlert={this.msgAlert} /> */}
-                                <IndexLocation2 />
+                                {/* <IndexLocation2 /> */}
                                 <Footer1 />
                             </div>
                         )}
