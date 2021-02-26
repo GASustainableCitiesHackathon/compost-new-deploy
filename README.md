@@ -9,7 +9,7 @@ Comthattrack utilizes NYC's Open data for Food Scrap Drop-Off Locations via [Soc
 
 **Future Deployment Plans**
 
-[ ]When users check submit their scrap, it will also save that weight in their users data, allowing uers to track their personal conservation efforts. 
+[]When users check submit their scrap, it will also save that weight in their users data, allowing uers to track their personal conservation efforts. 
 [ ] A compost drop-off tab in the nav bar so that users can utilize check in functionality without selecting a site on the map. 
 [ ] The Nav will also hold anaytics on conservation trends over time and overll statistics on performace versus average. 
 [ ] Incorporate Other Data Sources and Analytics 
