@@ -1,15 +1,15 @@
-##Compostrack 
+**Compostrack** 
 
 Aiming to encourage composting and sustainable practices in New York City, Compostrack makes food scrap drop off sites information more accessible in a map view, and provides users a view into their personal and their city's environmental inpact.
 
-##Technologies Used
+**Technologies Used**
 
 Compostrack was built using `JavaScript` and `React.js`, and styled using `React Bootstrap`, `Styled Divs` and `Axios` for API Requests. 
 Comthattrack utilizes NYC's Open data for Food Scrap Drop-Off Locations via [Socrata's Open Data API](https://dev.socrata.com/foundry/data.cityofnewyork.us/if26-z6xq) along with [mapbox-gl](https://docs.mapbox.com/mapbox-gl-js/api/) to allow users to view NYC's Frood Scrap Drop Off Locations, information on the locations such as hours of operation, website and contact information by selecting the map icon. Compostrack also has a robust [API](https://github.com/GASustainableCitiesHackathon/compost) built with MongoDB and Express.js that currently allows users to sign-in and add submit their the Qty (in Lbs) of food scrap that they dropped off at a selected drop-off location. But has the potential to display an incredible ammount of analytics. 
 
-###Future Deployment Plans
+**Future Deployment Plans**
 
-[ ] When users check submit their scrap, it will also save that weight in their users data, allowing uers to track their personal conservation efforts. 
+[ ]When users check submit their scrap, it will also save that weight in their users data, allowing uers to track their personal conservation efforts. 
 [ ] A compost drop-off tab in the nav bar so that users can utilize check in functionality without selecting a site on the map. 
 [ ] The Nav will also hold anaytics on conservation trends over time and overll statistics on performace versus average. 
 [ ] Incorporate Other Data Sources and Analytics 
