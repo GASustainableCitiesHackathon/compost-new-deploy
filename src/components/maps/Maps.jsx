@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import LocationCard from './LocationCard'
-// import 'mapbox-gl/dist/mapbox-gl.css'
+import 'mapbox-gl/dist/mapbox-gl.css'
 import styled from 'styled-components'
 import Geocoder from 'react-map-gl-geocoder'
 import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css"
