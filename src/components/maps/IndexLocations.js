@@ -8,7 +8,7 @@ import Faq from "../Faq/Faq";
 import { index } from "../../api/location";
 import "./IndexLocations.css";
 import "mapbox-gl/dist/mapbox-gl.css";
-import Maps2 from "./Maps2";
+// import Maps2 from "./Maps2";
 
 const IndexLocations = ({ user, msgAlert }) => {
     const [selectedBorough, setSelectedBorough] = useState("All");
@@ -46,16 +46,7 @@ const IndexLocations = ({ user, msgAlert }) => {
                 viewport={viewport}
             />
             {/* {data.length > 0 ? ( */}
-            {/* <Maps
-                user={user}
-                msgAlert={msgAlert}
-                viewport={viewport}
-                setViewport={setViewport}
-                data={data}
-                location={location}
-                setLocation={setLocation}
-            /> */}
-            <Maps2
+            <Maps
                 user={user}
                 msgAlert={msgAlert}
                 viewport={viewport}
@@ -64,6 +55,15 @@ const IndexLocations = ({ user, msgAlert }) => {
                 location={location}
                 setLocation={setLocation}
             />
+            {/* <Maps2
+                user={user}
+                msgAlert={msgAlert}
+                viewport={viewport}
+                setViewport={setViewport}
+                data={data}
+                location={location}
+                setLocation={setLocation}
+            /> */}
             {/* ) : (
         <LoadingWrapper>
           <Spinner className="center" animation="grow" variant="success" />
